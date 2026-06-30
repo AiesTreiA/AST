@@ -1,0 +1,6 @@
+# Archives and large temporary files
+*.zip
+
+# OS metadata
+.DS_Store
+Thumbs.db

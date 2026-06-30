@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AST - Los Actores por la Seguridad en el Trabajo | Teatro Preventivo</title>
+  <meta name="description" content="Transforma la cultura de seguridad de tu empresa con teatro preventivo. Obras en terreno personalizadas para construcción, industria, logística y minería.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar" class="progress-bar"></div>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="#inicio" class="logo" id="nav-logo">
+        <div class="logo-img-container">
+          <img src="logo_ast.png" alt="Los AST Logo" class="logo-img">
+        </div>
+        <span class="logo-text">Los AST</span>
+      </a>
+      
+      <button class="mobile-nav-toggle" aria-label="Abrir menú" aria-expanded="false" id="menu-toggle">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active" id="link-inicio">Inicio</a></li>
+          <li><a href="#propuesta-valor" class="nav-link" id="link-propuesta">Propuesta de Valor</a></li>
+          <li><a href="#planes" class="nav-link" id="link-planes">Planes</a></li>
+          <li><a href="#testimonios" class="nav-link" id="link-testimonios">Testimonios</a></li>
+          <li><a href="#agendamiento" class="nav-link" id="link-agendamiento">Agendamiento</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-glow" id="header-cta" onclick="openBookingModal()">
+          <i data-lucide="calendar"></i> Agendar Reunión
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-content scroll-reveal">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Teatro Preventivo Multi-Industria</span>
+          </div>
+          <h1 class="hero-title">
+            Los AST: <span class="text-gradient">Teatro Preventivo para Empresas</span>
+          </h1>
+          <p class="hero-description">
+            Una forma creativa, potente y efectiva de reforzar la seguridad laboral. En <strong>AST (Los Actores por la seguridad en el trabajo)</strong>, impactamos y educamos a través del humor, la reflexión y el realismo, llevando mensajes clave en terreno con obras inmersivas de 20 a 35 minutos.
+          </p>
+          
+          <!-- Hero Badges Row -->
+          <div class="hero-badges-row">
+            <div class="hero-mini-badge bg-blur">
+              <i data-lucide="brain-circuit" class="text-warning"></i>
+              <div>
+                <strong>Respaldo Científico</strong>
+                <span>Neurociencia aplicada</span>
+              </div>
+            </div>
+            <div class="hero-mini-badge bg-blur">
+              <i data-lucide="activity" class="text-success"></i>
+              <div>
+                <strong>Accidentabilidad</strong>
+                <span>-35% Promedio anual</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg btn-glow" onclick="openBookingModal()" id="hero-btn-primary">
+              <i data-lucide="calendar"></i> Agendar Reunión <span class="btn-subtext">(Con NDA)</span>
+            </button>
+            <a href="#planes" class="btn btn-secondary btn-lg" id="hero-btn-secondary">
+              <i data-lucide="layout-grid"></i> Ver Planes
+            </a>
+            <a href="AST.pdf" target="_blank" class="btn btn-secondary btn-lg" id="hero-btn-pdf">
+              <i data-lucide="file-text"></i> Ver Presentación PDF
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stats Bar -->
+      <div class="stats-bar scroll-reveal">
+        <div class="container stats-container">
+          <div class="stat-item">
+            <h3 class="stat-number">200+</h3>
+            <p class="stat-label">Actuaciones de Prevención</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h3 class="stat-number">100+</h3>
+            <p class="stat-label">Equipos Beneficiados</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h3 class="stat-number">+7</h3>
+            <p class="stat-label">Grandes Industrias</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h3 class="stat-number">35%</h3>
+            <p class="stat-label">Reducción de Incidentes</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clients Logos Bar -->
+      <div class="clients-logos-bar scroll-reveal">
+        <div class="container logos-container">
+          <span class="logos-title">Han confiado en nosotros</span>
+          <div class="logos-grid">
+            <div class="logo-item" title="Bechtel Corporation">
+              <img src="logo_bechtel.png" alt="Bechtel" class="client-logo-img">
+              <span class="logo-text-label">BECHTEL</span>
+            </div>
+            <div class="logo-item" title="Vial y Vives">
+              <img src="logo_vial_y_vives.png" alt="Vial y Vives" class="client-logo-img">
+              <span class="logo-text-label">VIAL Y VIVES</span>
+            </div>
+            <div class="logo-item" title="Teck">
+              <img src="logo_teck.png" alt="Teck" class="client-logo-img">
+              <span class="logo-text-label">TECK</span>
+            </div>
+            <div class="logo-item" title="Sigdo Koppers S.A.">
+              <img src="logo_sigdo_koppers.png" alt="Sigdo Koppers" class="client-logo-img">
+              <span class="logo-text-label">SIGDO KOPPERS</span>
+            </div>
+            <div class="logo-item" title="Echeverría Izquierdo">
+              <img src="logo_echeverria_izquierdo.png" alt="Echeverría Izquierdo" class="client-logo-img">
+              <span class="logo-text-label">ECH. IZQUIERDO</span>
+            </div>
+            <div class="logo-item" title="Excon">
+              <img src="logo_excon.png" alt="Excon" class="client-logo-img">
+              <span class="logo-text-label">EXCON</span>
+            </div>
+            <div class="logo-item" title="Aramark">
+              <img src="logo_aramark.png" alt="Aramark" class="client-logo-img">
+              <span class="logo-text-label">ARAMARK</span>
+            </div>
+            <div class="logo-item" title="Abengoa">
+              <img src="logo_abengoa.png" alt="Abengoa" class="client-logo-img">
+              <span class="logo-text-label">ABENGOA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propuesta de Valor Section -->
+    <section id="propuesta-valor" class="section-padding propuesta-section">
+      <div class="container">
+        
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Nuestra Metodología</span>
+          <h2 class="section-title">El aprendizaje que se siente, se recuerda</h2>
+          <p class="section-subtitle">
+            Conectamos con la amígdala cerebral a través del teatro profesional para romper la apatía y crear conciencia de seguridad permanente.
+          </p>
+        </div>
+
+        <!-- Problemática → Solución: Transformation Diagram -->
+        <div class="transformation-diagram scroll-reveal">
+
+          <!-- Header labels -->
+          <div class="transform-header-labels">
+            <div class="transform-col-label problem-label">
+              <i data-lucide="x-circle"></i>
+              <span>Problemática Detectada</span>
+            </div>
+            <div class="transform-col-label solution-label">
+              <i data-lucide="check-circle-2"></i>
+              <span>Resultado con AST</span>
+            </div>
+          </div>
+
+          <!-- Row 1: Fatiga → Impacto Teatral -->
+          <div class="transform-row" data-index="0">
+            <div class="transform-pill problem-pill">
+              <div class="pill-icon"><i data-lucide="battery-low"></i></div>
+              <div class="pill-content">
+                <strong>Fatiga por capacitación</strong>
+                <span>Los trabajadores pierden la atención en los primeros minutos de charlas repetitivas y monótonas.</span>
+              </div>
+            </div>
+            <div class="transform-arrow-col">
+              <div class="healing-arrow">
+                <svg class="arrow-svg" viewBox="0 0 120 40" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="healGrad0" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#dc2626"/>
+                      <stop offset="50%" stop-color="#f97316"/>
+                      <stop offset="100%" stop-color="#10b981"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="arrow-path" d="M4 20 Q30 20 58 20 Q90 20 116 20" stroke="url(#healGrad0)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <path class="arrow-head" d="M108 12 L120 20 L108 28" stroke="url(#healGrad0)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle class="arrow-pulse" cx="4" cy="20" r="4" fill="#dc2626"/>
+                </svg>
+                <span class="arrow-label">AST lo transforma</span>
+              </div>
+            </div>
+            <div class="transform-pill solution-pill">
+              <div class="pill-icon"><i data-lucide="theater"></i></div>
+              <div class="pill-content">
+                <strong>Impacto Teatral de 20 min</strong>
+                <span>Obras dinámicas e impactantes en su propia estación de trabajo, que capturan al 100% la atención.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Complacencia → Reflexión -->
+          <div class="transform-row" data-index="1">
+            <div class="transform-pill problem-pill">
+              <div class="pill-icon"><i data-lucide="eye-off"></i></div>
+              <div class="pill-content">
+                <strong>Complacencia operacional</strong>
+                <span>La rutina y el exceso de confianza ciegan a los equipos frente a riesgos graves.</span>
+              </div>
+            </div>
+            <div class="transform-arrow-col">
+              <div class="healing-arrow">
+                <svg class="arrow-svg" viewBox="0 0 120 40" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="healGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#dc2626"/>
+                      <stop offset="50%" stop-color="#f97316"/>
+                      <stop offset="100%" stop-color="#10b981"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="arrow-path" d="M4 20 Q30 20 58 20 Q90 20 116 20" stroke="url(#healGrad1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <path class="arrow-head" d="M108 12 L120 20 L108 28" stroke="url(#healGrad1)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle class="arrow-pulse" cx="4" cy="20" r="4" fill="#dc2626"/>
+                </svg>
+                <span class="arrow-label">AST lo transforma</span>
+              </div>
+            </div>
+            <div class="transform-pill solution-pill">
+              <div class="pill-icon"><i data-lucide="messages-square"></i></div>
+              <div class="pill-content">
+                <strong>Reflexión guiada inmediata</strong>
+                <span>Espacio de conversación post-función liderado por facilitadores que reactiva la conciencia del riesgo real.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Desconexión → Evaluación -->
+          <div class="transform-row" data-index="2">
+            <div class="transform-pill problem-pill">
+              <div class="pill-icon"><i data-lucide="heart-crack"></i></div>
+              <div class="pill-content">
+                <strong>Desconexión emocional</strong>
+                <span>El formato puramente teórico no logra empatizar con el verdadero valor de la vida y el autocuidado.</span>
+              </div>
+            </div>
+            <div class="transform-arrow-col">
+              <div class="healing-arrow">
+                <svg class="arrow-svg" viewBox="0 0 120 40" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="healGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#dc2626"/>
+                      <stop offset="50%" stop-color="#f97316"/>
+                      <stop offset="100%" stop-color="#10b981"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="arrow-path" d="M4 20 Q30 20 58 20 Q90 20 116 20" stroke="url(#healGrad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <path class="arrow-head" d="M108 12 L120 20 L108 28" stroke="url(#healGrad2)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle class="arrow-pulse" cx="4" cy="20" r="4" fill="#dc2626"/>
+                </svg>
+                <span class="arrow-label">AST lo transforma</span>
+              </div>
+            </div>
+            <div class="transform-pill solution-pill">
+              <div class="pill-icon"><i data-lucide="heart-handshake"></i></div>
+              <div class="pill-content">
+                <strong>Evaluación Científica</strong>
+                <span>Un prevencionista de riesgos calificado mide y certifica la adquisición efectiva del conocimiento con emoción.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Beneficios (Multi-Industria & Neurociencia) -->
+        <div class="benefits-container scroll-reveal">
+          <div class="grid grid-3 gap-md">
+            
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i data-lucide="factory"></i>
+              </div>
+              <h4 class="benefit-title">Adaptabilidad Multi-Sector</h4>
+              <p class="benefit-desc">
+                No somos solo para minería. Personalizamos nuestras intervenciones para Construcción, Logística, Retail, Manufactura, Energía, Forestal y Puertos.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i data-lucide="brain"></i>
+              </div>
+              <h4 class="benefit-title">Teoría del Anclaje Emocional</h4>
+              <p class="benefit-desc">
+                La emoción activa la memoria a largo plazo. Un mensaje de seguridad entregado mediante el teatro se retiene hasta 6 veces más que una diapositiva.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <h4 class="benefit-title">Resultados Tangibles</h4>
+              <p class="benefit-desc">
+                Entregamos reportes detallados de la encuesta de impacto para que tu departamento de SSO/HSE tenga métricas concretas para auditorías.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Resultados Esperados -->
+        <div class="expected-results-card glass-card scroll-reveal">
+          <div class="grid grid-2 gap-lg align-center">
+            <div>
+              <span class="section-tag">Objetivos Claros</span>
+              <h3 class="card-title">Resultados que transforman tu organización</h3>
+              <p class="results-intro">
+                Al implementar las intervenciones de AST en tus operaciones, no solo cumples con la normativa, también logras:
+              </p>
+              <div class="results-grid">
+                <div class="result-checkbox-item">
+                  <i data-lucide="check-square" class="text-primary"></i>
+                  <span>Reducción real y sostenida de incidentes y cuasi-accidentes.</span>
+                </div>
+                <div class="result-checkbox-item">
+                  <i data-lucide="check-square" class="text-primary"></i>
+                  <span>Mayor reporte proactivo de condiciones inseguras por parte de los trabajadores.</span>
+                </div>
+                <div class="result-checkbox-item">
+                  <i data-lucide="check-square" class="text-primary"></i>
+                  <span>Mejora en el clima de seguridad interno y fortalecimiento del liderazgo.</span>
+                </div>
+                <div class="result-checkbox-item">
+                  <i data-lucide="check-square" class="text-primary"></i>
+                  <span>Evidencia sólida de capacitación de alto estándar para entes fiscalizadores.</span>
+                </div>
+              </div>
+            </div>
+            <div class="results-visual">
+              <div class="results-chart-mockup">
+                <div class="chart-header">
+                  <span>Tasa de Accidentabilidad Anual</span>
+                  <span class="text-success"><i data-lucide="arrow-down-right"></i> -35%</span>
+                </div>
+                <div class="chart-bars">
+                  <div class="chart-bar-group">
+                    <span class="bar-label">Tradicional</span>
+                    <div class="bar-container">
+                      <div class="bar bar-before" style="width: 90%;">9.2%</div>
+                    </div>
+                  </div>
+                  <div class="chart-bar-group">
+                    <span class="bar-label">Con AST</span>
+                    <div class="bar-container">
+                      <div class="bar bar-after animate-bar" style="width: 58%;">5.9%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SSO / HSE Compliance Badges -->
+        <div class="sso-badges-banner scroll-reveal">
+          <span class="badges-title">Alineado con Estándares y Normas</span>
+          <div class="badges-grid">
+            <div class="badge-card">
+              <i data-lucide="shield-check"></i>
+              <div>
+                <strong>ISO 45001</strong>
+                <span>Gestión de SSO</span>
+              </div>
+              <div class="badge-infographic">
+                <div class="info-title">ISO 45001: Gestión de SSO</div>
+                <div class="info-section">
+                  <span class="info-label aplica"><i data-lucide="check-circle-2"></i> Aplica:</span>
+                  <p>Sistemas globales de gestión de seguridad y salud ocupacional.</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label previene"><i data-lucide="shield-alert"></i> Previene:</span>
+                  <p>Accidentes fatales, enfermedades laborales y multas por incumplimiento.</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label impacto"><i data-lucide="sparkles"></i> Impacto AST:</span>
+                  <p>Fomenta la cláusula de "participación y consulta" del personal mediante teatro activo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="badge-card">
+              <i data-lucide="award"></i>
+              <div>
+                <strong>HSE Compliant</strong>
+                <span>Estándares Globales</span>
+              </div>
+              <div class="badge-infographic">
+                <div class="info-title">HSE: Estándares Globales</div>
+                <div class="info-section">
+                  <span class="info-label aplica"><i data-lucide="check-circle-2"></i> Aplica:</span>
+                  <p>Políticas de Salud, Seguridad y Medio Ambiente minero/industrial.</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label previene"><i data-lucide="shield-alert"></i> Previene:</span>
+                  <p>Desvíos operativos en trabajos críticos (altura, energía, cargas).</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label impacto"><i data-lucide="sparkles"></i> Impacto AST:</span>
+                  <p>Traduce "Reglas que Salvan Vidas" abstractas en hábitos reales en terreno.</p>
+                </div>
+              </div>
+            </div>
+            <div class="badge-card">
+              <i data-lucide="scale"></i>
+              <div>
+                <strong>DS 40 / Art. 21</strong>
+                <span>Cumplimiento Legal DT</span>
+              </div>
+              <div class="badge-infographic">
+                <div class="info-title">DS 40 / Art. 21: Obligación Legal</div>
+                <div class="info-section">
+                  <span class="info-label aplica"><i data-lucide="check-circle-2"></i> Aplica:</span>
+                  <p>Deber legal de informar los riesgos laborales (Derecho a Saber - DAS).</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label previene"><i data-lucide="shield-alert"></i> Previene:</span>
+                  <p>Demandas por falta de inducción y sanciones de la Dirección del Trabajo.</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label impacto"><i data-lucide="sparkles"></i> Impacto AST:</span>
+                  <p>Asegura y documenta la adquisición del conocimiento mediante evaluación formal.</p>
+                </div>
+              </div>
+            </div>
+            <div class="badge-card">
+              <i data-lucide="heart-pulse"></i>
+              <div>
+                <strong>Mutualidades</strong>
+                <span>Respaldo Técnico</span>
+              </div>
+              <div class="badge-infographic">
+                <div class="info-title">Mutualidades: Respaldo Técnico</div>
+                <div class="info-section">
+                  <span class="info-label aplica"><i data-lucide="check-circle-2"></i> Aplica:</span>
+                  <p>Programas de prevención y control de siniestralidad (Ley 16.744).</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label previene"><i data-lucide="shield-alert"></i> Previene:</span>
+                  <p>Aumento en la tasa de cotización adicional por accidentes frecuentes.</p>
+                </div>
+                <div class="info-section">
+                  <span class="info-label impacto"><i data-lucide="sparkles"></i> Impacto AST:</span>
+                  <p>Refuerza campañas técnicas con anclaje emocional y recordación a largo plazo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Temáticas y Metodología Section -->
+    <section id="metodologia" class="section-padding metodologia-section">
+      <div class="container">
+        
+        <div class="grid grid-2 gap-lg align-center">
+          
+          <!-- Temáticas que Trabajamos (Left) -->
+          <div class="scroll-reveal">
+            <span class="section-tag">Nuestras Temáticas</span>
+            <h2 class="section-title">Temáticas de Alto Impacto</h2>
+            <p class="section-subtitle-small">
+              Cada obra aborda situaciones reales con un enfoque preventivo y emocionalmente potente.
+            </p>
+            <div class="tematicas-list-grid">
+              <div class="tematica-card-mini">
+                <i data-lucide="shield-check" class="text-primary"></i>
+                <span>Uso de elementos de protección personal (EPP)</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="zap" class="text-primary"></i>
+                <span>Prevención de caídas, atrapamientos y accidentes eléctricos</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="beer" class="text-primary"></i>
+                <span>Fatiga, consumo de alcohol y drogas</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="truck" class="text-primary"></i>
+                <span>Manejo de maquinaria pesada</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="message-square" class="text-primary"></i>
+                <span>Comunicación efectiva entre equipos</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="heart" class="text-primary"></i>
+                <span>Cuidado del compañero: cultura del autocuidado</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="users" class="text-primary"></i>
+                <span>Violencia o acoso laboral (si aplica)</span>
+              </div>
+              <div class="tematica-card-mini">
+                <i data-lucide="warehouse" class="text-primary"></i>
+                <span>Prevención en minería, construcción, faenas y bodegas</span>
+              </div>
+            </div>
+            <p class="tematicas-footer-text">
+              <em>Creamos obras a medida según las necesidades de tu empresa.</em>
+            </p>
+          </div>
+
+          <!-- ¿Cómo lo Hacemos? Etapas (Right) -->
+          <div class="scroll-reveal">
+            <span class="section-tag">El Proceso</span>
+            <h2 class="section-title">¿Cómo lo hacemos?</h2>
+            <p class="section-subtitle-small">
+              La prevención no tiene por qué ser aburrida. Nuestro enfoque mezcla teatro profesional con contenidos técnicos.
+            </p>
+            
+            <div class="process-steps">
+              <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Diagnóstico Previo</h4>
+                  <p>Recogemos información clave de la cultura preventiva y dolores de tu empresa.</p>
+                </div>
+              </div>
+              
+              <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Adaptación del Guion</h4>
+                  <p>Basado en riesgos reales de tu operación y usando un lenguaje cotidiano.</p>
+                </div>
+              </div>
+              
+              <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Función en Terreno</h4>
+                  <p>Teatro cercano, potente, dinámico con obras inmersivas de 20 a 35 minutos.</p>
+                </div>
+              </div>
+              
+              <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Reflexión Final</h4>
+                  <p>Opcional, espacio guiado para debate, preguntas o retroalimentación.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Galería de Proyectos Section (Quebrada Blanca II) -->
+    <section id="galeria" class="section-padding galeria-section">
+      <div class="container">
+        
+        <div class="scroll-reveal text-center margin-bottom-lg">
+          <span class="section-tag text-secondary">Registro en Terreno</span>
+          <h2 class="section-title">Proyecto Quebrada Blanca II (Teck / Bechtel)</h2>
+          <p class="section-subtitle">
+            Imágenes y video reales de nuestras intervenciones teatrales de seguridad inmersiva directamente en una de las operaciones mineras más grandes del país.
+          </p>
+        </div>
+
+        <div class="grid grid-2 gap-lg align-center">
+          
+          <!-- Video de Intervención (Left) -->
+          <div class="scroll-reveal video-card glass-card">
+            <div class="video-container">
+              <video controls autoplay muted loop playsinline poster="images/qb2/qb2_photo_1.jpg" class="qb2-video">
+                <source src="images/qb2/qb2_video_1.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+              </video>
+            </div>
+            <div class="video-info">
+              <h4>Registro de videoclip de los Riesgos Críticos de Vida</h4>
+              <p>Solicitado y presentada a todas las empresas del proyecto minera Quebrada Blanca II</p>
+            </div>
+          </div>
+
+          <!-- Fotos Grid (Right) -->
+          <div class="scroll-reveal">
+            <div class="gallery-photo-grid">
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/qb2/qb2_photo_2.jpg" alt="Charla de seguridad teatral en faena minera">
+                <div class="gallery-overlay">
+                  <i data-lucide="zoom-in"></i>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/qb2/qb2_photo_5.jpg" alt="Participación del personal en terreno">
+                <div class="gallery-overlay">
+                  <i data-lucide="zoom-in"></i>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/qb2/qb2_photo_9.jpg" alt="Actores interactuando en faena de minería">
+                <div class="gallery-overlay">
+                  <i data-lucide="zoom-in"></i>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/qb2/qb2_photo_14.jpg" alt="Intervención teatral inmersiva en Quebrada Blanca II">
+                <div class="gallery-overlay">
+                  <i data-lucide="zoom-in"></i>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/qb2/qb2_photo_21.jpg" alt="Compañerismo y reflexión grupal en faena">
+                <div class="gallery-overlay">
+                  <i data-lucide="zoom-in"></i>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images/qb2/qb2_photo_25.jpg" alt="EPP y puesta en escena en taller de mantención">
+                <div class="gallery-overlay">
+                  <i data-lucide="zoom-in"></i>
+                </div>
+              </div>
+            </div>
+            <div class="text-center margin-top-md">
+              <button class="btn btn-secondary" onclick="toggleExtendedGallery()">
+                <i data-lucide="images"></i> Ver Más Fotos
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Extended Gallery (Hidden by default) -->
+        <div id="extended-gallery" class="extended-gallery" style="display: none;">
+          <div class="extended-photo-grid margin-top-lg">
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_3.jpg" alt="Dinámicas de prevención"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_4.jpg" alt="Puesta en escena industrial"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_6.jpg" alt="Despliegue actoral"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_8.jpg" alt="Reflexión de riesgos en terreno"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_11.jpg" alt="Integración con contratistas"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_13.jpg" alt="Cascos y elementos de seguridad"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_16.jpg" alt="Impacto emocional en faenas"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_20.jpg" alt="Trabajadores presenciando la obra"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_22.jpg" alt="Dinámica grupal post-función"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_27.jpg" alt="Prevencionistas supervisando el evento"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_29.jpg" alt="Cultura de autocuidado en taller"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/qb2/qb2_photo_31.jpg" alt="Cierre de jornada de seguridad"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section id="planes" class="section-padding planes-section">
+      <div class="planes-bg-glow"></div>
+      <div class="container">
+        
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Nuestras Soluciones</span>
+          <h2 class="section-title">Elige el plan ideal para tu empresa</h2>
+          <p class="section-subtitle">
+            Todos los planes incluyen actores profesionales en terreno, elementos de protección personal (EPP) completos, seguro de responsabilidad civil y coordinación logística.
+          </p>
+        </div>
+
+        <div class="planes-grid scroll-reveal">
+          
+          <!-- Plan Básico -->
+          <div class="plan-card glass-card">
+            <div class="plan-header">
+              <span class="plan-tag">Ideal para Campañas</span>
+              <h3 class="plan-name">Básico</h3>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">700.000</span>
+                <span class="period">/ obra</span>
+              </div>
+              <p class="plan-desc">Perfecto para abordar riesgos críticos específicos de forma rápida y efectiva.</p>
+            </div>
+            <div class="plan-divider"></div>
+            <ul class="plan-features">
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>1 Presentación</strong> en terreno de una obra selecta de riesgos críticos.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span>Catálogo de los <strong>7 riesgos críticos</strong> prefabricados.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>Interacción post-función:</strong> Dinámica guiada de reflexión grupal de 10 min.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>Encuesta digital</strong> de impacto en los participantes.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span>Reporte de adquisición efectiva de conocimientos.</span>
+              </li>
+            </ul>
+            <div class="plan-footer">
+              <button class="btn btn-secondary w-full" onclick="openBookingModal('Básico')">Seleccionar Plan</button>
+            </div>
+          </div>
+
+          <!-- Plan Empresa Segura -->
+          <div class="plan-card glass-card plan-featured">
+            <div class="featured-badge">Más Elegido</div>
+            <div class="plan-header">
+              <span class="plan-tag text-warning">Personalización y Frecuencia</span>
+              <h3 class="plan-name">Plan Empresa Segura</h3>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">2.300.000</span>
+                <span class="period">/ servicio</span>
+              </div>
+              <p class="plan-desc">Diseñado para resolver problemáticas específicas y lograr un impacto más duradero.</p>
+            </div>
+            <div class="plan-divider"></div>
+            <ul class="plan-features">
+              <li>
+                <i data-lucide="check" class="feature-icon text-warning"></i>
+                <span><strong>Levantamiento de información</strong> personalizado de la cultura preventiva de tu empresa.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon text-warning"></i>
+                <span><strong>Creación de 1 obra específica:</strong> Guión adaptado a la realidad e historia de tu empresa.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon text-warning"></i>
+                <span><strong>3 Presentaciones</strong> en terreno (distribuidas en turnos o sucursales).</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon text-warning"></i>
+                <span><strong>Interacción y dinámica</strong> participativa tras cada obra.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon text-warning"></i>
+                <span><strong>Evaluación profunda de impacto</strong> y adquisición final de conocimientos.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon text-warning"></i>
+                <span>Reporte ejecutivo final de desempeño con recomendaciones HSE.</span>
+              </li>
+            </ul>
+            <div class="plan-footer">
+              <button class="btn btn-primary btn-glow w-full" onclick="openBookingModal('Empresa Segura')">Seleccionar Plan</button>
+            </div>
+          </div>
+
+          <!-- Plan Accidentabilidad Cero -->
+          <div class="plan-card glass-card">
+            <div class="plan-header">
+              <span class="plan-tag">Transformación Cultural</span>
+              <h3 class="plan-name">Accidentabilidad Cero</h3>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">6.500.000</span>
+                <span class="period">/ año</span>
+              </div>
+              <p class="plan-desc">Acompañamiento continuo y periódico para lograr erradicar los incidentes graves en tu operación.</p>
+            </div>
+            <div class="plan-divider"></div>
+            <ul class="plan-features">
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>Servicio Anual continuo:</strong> Presencia permanente en el calendario preventivo.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>1 Levantamiento personalizado</strong> de información de riesgos <strong>cada 3 meses</strong>.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>12 Presentaciones selectas</strong> de teatro preventivo al año.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span>Adaptación de libretos según evolución trimestral de riesgos de la empresa.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span><strong>Métricas de satisfacción y de impacto</strong> trimestrales completas.</span>
+              </li>
+              <li>
+                <i data-lucide="check" class="feature-icon"></i>
+                <span>Dashboard de evolución de cultura de seguridad y reportabilidad.</span>
+              </li>
+            </ul>
+            <div class="plan-footer">
+              <button class="btn btn-secondary w-full" onclick="openBookingModal('Accidentabilidad Cero')">Seleccionar Plan</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="section-padding testimonios-section">
+      <div class="container">
+        
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Testimonios Reales</span>
+          <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+          <p class="section-subtitle">
+            Gerentes de HSE y directores de prevención de diversas industrias respaldan el impacto del teatro preventivo de AST.
+          </p>
+        </div>
+
+        <div class="testimonios-carousel scroll-reveal">
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="testimonios-track">
+              
+              <!-- Slide 1 -->
+              <div class="testimonio-card glass-card active">
+                <div class="testimonio-header">
+                  <div class="stars">
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                  </div>
+                  <span class="client-industry badge-logistica">Logística y Bodegaje</span>
+                </div>
+                <p class="testimonio-text">
+                  "Teníamos problemas con el correcto uso de los arneses y el trabajo en altura en los racks de despacho. La obra de AST retrató de forma cómica pero dramática lo que pasaba y caló hondo. La reportabilidad aumentó un 40% porque los operarios entendieron que el autocuidado no es una regla, es para volver sanos a casa."
+                </p>
+                <div class="testimonio-author">
+                  <div class="author-info">
+                    <strong>Mauricio Contreras</strong>
+                    <span class="author-title">Subgerente de Prevención de Riesgos, LogiTrans S.A.</span>
+                    <span class="nda-caption">*Entidad ficticia por acuerdo de confidencialidad (NDA)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="testimonio-card glass-card">
+                <div class="testimonio-header">
+                  <div class="stars">
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                  </div>
+                  <span class="client-industry badge-construccion">Construcción</span>
+                </div>
+                <p class="testimonio-text">
+                  "El Plan Empresa Segura superó nuestras expectativas. Desarrollaron una obra enfocada en el riesgo de caída de objetos e interacción hombre-máquina en nuestra principal obra vial. Los trabajadores conversaron y debatieron después de la función como nunca antes en una charla tradicional."
+                </p>
+                <div class="testimonio-author">
+                  <div class="author-info">
+                    <strong>Patricia Alcaíno</strong>
+                    <span class="author-title">Directora Nacional HSE, Constructora Andes Sur</span>
+                    <span class="nda-caption">*Entidad ficticia por acuerdo de confidencialidad (NDA)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="testimonio-card glass-card">
+                <div class="testimonio-header">
+                  <div class="stars">
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                    <i data-lucide="star" class="star-fill"></i>
+                  </div>
+                  <span class="client-industry badge-energia">Energía y Eléctrica</span>
+                </div>
+                <p class="testimonio-text">
+                  "Llevamos 8 meses con el plan de Accidentabilidad Cero de AST. Cada 3 meses hacemos un levantamiento de los casi-accidentes ocurridos y los actores lo plasman en la siguiente función. Las métricas trimestrales de satisfacción y adquisición de conocimientos nos han servido enormemente para respaldar la gestión del área ante el directorio."
+                </p>
+                <div class="testimonio-author">
+                  <div class="author-info">
+                    <strong>Humberto Vial</strong>
+                    <span class="author-title">Gerente Corporativo de Seguridad, Generadora del Pacífico</span>
+                    <span class="nda-caption">*Entidad ficticia por acuerdo de confidencialidad (NDA)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="carousel-controls">
+            <button class="carousel-btn prev" id="carousel-prev" aria-label="Testimonio anterior">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="carousel-indicators" id="carousel-indicators">
+              <span class="indicator active" data-slide="0"></span>
+              <span class="indicator" data-slide="1"></span>
+              <span class="indicator" data-slide="2"></span>
+            </div>
+            <button class="carousel-btn next" id="carousel-next" aria-label="Siguiente testimonio">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        
+        <p class="testimonials-disclaimer text-center mt-md text-tertiary">
+          <em>*Los nombres de las personas y entidades han sido modificados para cumplir estrictamente con el Acuerdo de Confidencialidad (NDA) vigente firmado con nuestros clientes.</em>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Derribando Dudas (FAQ & Objeciones) Section -->
+    <section id="faq" class="section-padding faq-section">
+      <div class="container">
+        
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Transparencia Total</span>
+          <h2 class="section-title">Derribando barreras: todo lo que necesitas saber</h2>
+          <p class="section-subtitle">
+            Respondemos con total claridad a las dudas y objeciones comunes de los departamentos de Finanzas, Prevención y Operaciones.
+          </p>
+        </div>
+
+        <div class="faq-grid scroll-reveal">
+          
+          <div class="faq-accordion">
+            
+            <!-- Pregunta 1 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="faq-question">¿El teatro preventivo es solo un show de entretenimiento o realmente educa?</span>
+                <i data-lucide="chevron-down" class="faq-chevron"></i>
+              </button>
+              <div class="faq-content">
+                <p>
+                  <strong>No es un show pasivo ni una distracción.</strong> Utilizamos la técnica del <em>Teatro Fórum</em> y el anclaje emocional respaldado por la neurociencia. Al presenciar situaciones de riesgo interpretadas con realismo y emoción, el cerebro de los colaboradores empatiza de inmediato y activa la amígdala cerebral, grabando las normas de seguridad en la memoria a largo plazo. 
+                </p>
+                <p>
+                  Además, no dejamos el aprendizaje al azar: realizamos una <strong>encuesta digital interactiva de adquisición de conocimientos</strong> post-función para medir la asimilación efectiva de los conceptos y entregar reportes con datos duros.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="faq-question">¿Cómo justifico esta inversión ante la gerencia de finanzas o el directorio?</span>
+                <i data-lucide="chevron-down" class="faq-chevron"></i>
+              </button>
+              <div class="faq-content">
+                <p>
+                  <strong>Prevenir un solo accidente menor ya financia el servicio completo de AST.</strong> El costo directo e indirecto de un accidente laboral (licencias médicas, reemplazos, paralización de faenas por la Inspección del Trabajo, multas y el aumento de la cotización adicional en la Mutualidad) es exponencialmente mayor que cualquiera de nuestros planes.
+                </p>
+                <p>
+                  Invertir $700.000 en el Plan Básico, $2.300.000 en el Plan Empresa Segura o $6.500.000 en el Plan Accidentabilidad Cero reduce la accidentabilidad en un <strong>35% promedio anual</strong>. Adicionalmente, entregamos informes ejecutivos y métricas de adquisición de conocimientos que sirven como evidencia de gestión activa de SSO ante el directorio y Mutuales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="faq-question">Nuestras operaciones no pueden detenerse. ¿Cuánto tiempo productivo requiere la actividad?</span>
+                <i data-lucide="chevron-down" class="faq-chevron"></i>
+              </button>
+              <div class="faq-content">
+                <p>
+                  <strong>Solo requiere 30 minutos en total.</strong> Desglosados en: 20 minutos de obra teatral de alto impacto y 10 minutos de reflexión guiada y encuesta digital.
+                </p>
+                <p>
+                  No necesitas trasladar a los trabajadores a salas de capacitación ni sacarlos de la obra por horas. Nos instalamos directamente en terreno (patios de acopio, comedores, talleres, bodegas) y nos acoplamos a las charlas de inicio de turno (charlas de 5 minutos), pausas activas o cambios de turno. El impacto en la productividad operativa es prácticamente cero.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="faq-question">Nuestra empresa tiene riesgos muy particulares. ¿Sirve una obra de catálogo?</span>
+                <i data-lucide="chevron-down" class="faq-chevron"></i>
+              </button>
+              <div class="faq-content">
+                <p>
+                  Para campañas rápidas, nuestro Plan Básico cubre de forma excelente los 7 riesgos críticos transversales. Sin embargo, si tus dolores son muy específicos (ej. interacción peatón-grúa horquilla en bodegas de frío o manejo de sustancias químicas específicas), el <strong>Plan Empresa Segura</strong> y el plan de <strong>Accidentabilidad Cero</strong> están diseñados para ti.
+                </p>
+                <p>
+                  Realizamos un levantamiento técnico previo junto a tus prevencionistas de riesgos, estudiamos tus Procedimientos de Trabajo Seguro (PTS), analizamos tus incidentes reales del pasado e incorporamos el lenguaje técnico y modismos que usa tu personal en obra para crear un guión 100% personalizado.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="faq-question">¿Este servicio califica como evidencia válida ante fiscalizaciones y el "Derecho a Saber"?</span>
+                <i data-lucide="chevron-down" class="faq-chevron"></i>
+              </button>
+              <div class="faq-content">
+                <p>
+                  <strong>Sí, califica plenamente.</strong> El artículo 21 del Decreto Supremo N° 40 (Ley 16.744 en Chile) exige que los empleadores informen de manera oportuna y conveniente a todos sus trabajadores acerca de los riesgos asociados a sus labores. 
+                </p>
+                <p>
+                  Al finalizar las obras de AST, se procesan las encuestas de impacto y conocimientos, y te entregamos un <strong>registro de asistencia digitalizado</strong> respaldado con el porcentaje de aprobación técnica de cada colaborador, sirviendo como evidencia válida e indiscutible ante la Inspección del Trabajo, Seremi de Salud y auditorías de Mutuales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="faq-question">¿Los actores que ingresan a faena conocen las normas de seguridad y llevan su propio EPP?</span>
+                <i data-lucide="chevron-down" class="faq-chevron"></i>
+              </button>
+              <div class="faq-content">
+                <p>
+                  <strong>Absolutamente.</strong> Todos los actores de AST están capacitados en inducción de seguridad para entornos industriales de alto riesgo. Adicionalmente:
+                </p>
+                <ul>
+                  <li><strong>Uniforme de faena básico:</strong> Cuentan con un uniforme básico neutro de faena, diseñado estratégicamente para poder ser complementado con el uniforme corporativo y el logotipo de cada empresa contratante, reforzando la identidad de la marca.</li>
+                  <li><strong>EPP completo y normado:</strong> Casco de seguridad, calzado con puntera de acero, lentes de protección, chaleco reflectante tipo geólogo.</li>
+                  <li><strong>Seguridad legal:</strong> Seguro de Accidentes Personales y Responsabilidad Civil de cobertura completa.</li>
+                  <li><strong>Acreditaciones:</strong> Disponibilidad completa para inducciones "hombre nuevo" y procesos internos de acreditación en faena.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Agendamiento Call To Action -->
+    <section id="agendamiento" class="section-padding agendamiento-cta-section">
+      <div class="container scroll-reveal">
+        <div class="cta-card glass-card">
+          <div class="cta-bg-glow"></div>
+          <div class="cta-content">
+            <span class="badge badge-warning">Proteger Propiedad Intelectual</span>
+            <h2 class="cta-title">¿Conversamos sobre la seguridad de tus equipos?</h2>
+            <p class="cta-desc">
+              Agenda una reunión virtual de ventas con nuestro equipo. Para tu tranquilidad y resguardo de la metodología única de AST, presentaremos un Acuerdo de Confidencialidad (NDA) antes de realizar el agendamiento formal de la videollamada.
+            </p>
+            <div class="cta-actions">
+              <button class="btn btn-primary btn-lg btn-glow" onclick="openBookingModal()" id="cta-book-btn">
+                <i data-lucide="calendar-check"></i> Agendar Reunión de Ventas <span class="btn-subtext">(NDA Incluido)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-img-container">
+            <img src="logo_ast.png" alt="Los AST Logo" class="logo-img">
+          </div>
+          <span class="logo-text">Los AST</span>
+        </div>
+        <p class="footer-description">
+          Los Actores por la seguridad en el trabajo. Teatro preventivo de alto impacto diseñado para transformar conductas y erradicar accidentes laborales.
+        </p>
+      </div>
+      
+      <div class="footer-links-group">
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#propuesta-valor">Propuesta de Valor</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Industrias</h4>
+        <ul>
+          <li><a href="#propuesta-valor">Construcción y Obras</a></li>
+          <li><a href="#propuesta-valor">Logística y Distribución</a></li>
+          <li><a href="#propuesta-valor">Manufactura e Industrial</a></li>
+          <li><a href="#propuesta-valor">Energía y Minería</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <ul>
+          <li><i data-lucide="mail"></i> contacto@actoresseguridad.cl</li>
+          <li><i data-lucide="phone"></i> +56 9 6674 9240</li>
+          <li><i data-lucide="map-pin"></i> Santiago, Chile</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AST (Los Actores por la seguridad en el trabajo). Todos los derechos reservados.</p>
+      <p class="legal-notice">La metodología de teatro preventivo, dinámicas post-obra y reportes de impacto están sujetos a propiedad intelectual y protegidos bajo el acuerdo de confidencialidad (NDA).</p>
+    </div>
+  </footer>
+
+  <!-- Booking & NDA Native Dialog Modal - Calendly Style -->
+  <dialog id="booking-modal" class="booking-dialog" closedby="any" aria-labelledby="modal-title">
+    <div class="modal-wrapper">
+
+      <!-- Close Button -->
+      <button class="modal-close" onclick="closeBookingModal()" aria-label="Cerrar modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- ===== CALENDLY LAYOUT ===== -->
+      <div class="cly-layout" id="modal-container-grid">
+
+        <!-- LEFT SIDEBAR: Profile + Meeting Info -->
+        <aside class="cly-sidebar">
+          <div class="cly-sidebar-inner">
+            <div class="cly-avatar-ring">
+              <div class="cly-avatar">
+                <i data-lucide="shield-alert"></i>
+              </div>
+            </div>
+            <p class="cly-org">AST — Actores por la Seguridad</p>
+            <h2 class="cly-meeting-name" id="modal-title">Reunión de Ventas</h2>
+
+            <ul class="cly-meta">
+              <li>
+                <span class="cly-meta-icon"><i data-lucide="clock"></i></span>
+                <span>30 minutos</span>
+              </li>
+              <li>
+                <span class="cly-meta-icon"><i data-lucide="video"></i></span>
+                <span>Google Meet</span>
+              </li>
+              <li>
+                <span class="cly-meta-icon"><i data-lucide="globe"></i></span>
+                <span>Santiago, Chile (GMT-4)</span>
+              </li>
+            </ul>
+
+            <!-- NDA Badge: Step 1 -->
+            <div class="cly-nda-panel" id="cly-nda-panel">
+              <div class="cly-nda-header">
+                <span class="cly-nda-icon"><i data-lucide="file-key-2"></i></span>
+                <span class="cly-nda-label">Paso 1 de 3 — NDA</span>
+              </div>
+              <p class="cly-nda-desc">Debes aceptar el Acuerdo de Confidencialidad antes de elegir fecha y hora.</p>
+
+              <!-- NDA Scroll Box -->
+              <div class="cly-nda-text" id="nda-scrollbox">
+                <h4>ACUERDO DE CONFIDENCIALIDAD Y PROTECCIÓN DE PROPIEDAD INTELECTUAL</h4>
+                <p>El presente Acuerdo (en adelante, el "Acuerdo") es celebrado entre <strong>AST (Los Actores por la seguridad en el trabajo)</strong> y el <strong>Solicitante</strong> de la reunión virtual de venta.</p>
+                <h5>1. Información Confidencial</h5>
+                <p>Se considera "Información Confidencial" toda información técnica, comercial, metodologías de teatro preventivo, libretos de obras selectas, estructuras de encuestas de impacto, dinámicas grupales de reflexión post-función, procesos logísticos, tarifas y propuestas personalizadas compartidos por AST durante la reunión.</p>
+                <h5>2. Obligación de No Divulgación</h5>
+                <p>El Solicitante se compromete a mantener estricta reserva y no divulgar, reproducir, copiar ni utilizar para beneficio propio o de terceros la Información Confidencial de AST sin autorización previa y por escrito.</p>
+                <h5>3. Protección de Propiedad Intelectual</h5>
+                <p>El Solicitante reconoce que los derechos de propiedad intelectual del sistema de capacitación interactiva y teatral corresponden exclusivamente a AST. Este contacto comercial no otorga licencia ni traspaso de derechos.</p>
+                <h5>4. Duración y Ley Aplicable</h5>
+                <p>Esta obligación de confidencialidad entrará en vigencia a partir del envío de este formulario y tendrá duración indefinida. Ante cualquier controversia, las partes se someten a las leyes y tribunales de la República de Chile.</p>
+                <div class="cly-nda-end" id="nda-end-marker">— Fin del Acuerdo de Confidencialidad —</div>
+              </div>
+
+              <div class="cly-scroll-hint" id="scroll-prompt">
+                <i data-lucide="arrow-down"></i>
+                <span>Desplázate hasta el final para aceptar</span>
+              </div>
+
+              <label class="cly-checkbox" id="nda-check-label">
+                <input type="checkbox" id="nda-checkbox" disabled>
+                <span class="cly-checkmark"></span>
+                <span class="cly-check-text">He leído y acepto el Acuerdo de Confidencialidad de AST</span>
+              </label>
+            </div>
+
+            <!-- Confirmed meeting info (shown after step 1 done) -->
+            <div class="cly-confirmed-info" id="cly-confirmed-info" style="display:none">
+              <div class="cly-step-done">
+                <i data-lucide="shield-check"></i>
+                <span>NDA Aceptado</span>
+              </div>
+              <div class="cly-selected-date-display" id="cly-date-display" style="display:none">
+                <i data-lucide="calendar-check"></i>
+                <span id="cly-date-text">—</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT CONTENT: Steps 2 & 3 -->
+        <main class="cly-main">
+
+          <!-- STEP 2: Calendar -->
+          <div class="cly-step" id="cly-step-calendar" style="display:none">
+            <h3 class="cly-step-title">Paso 2 — Elige una fecha y hora</h3>
+
+            <div class="cly-cal-wrapper">
+              <!-- Calendar -->
+              <div class="cly-calendar">
+                <div class="cly-cal-nav">
+                  <button class="cly-nav-btn" id="cal-prev-btn" onclick="calPrev()" aria-label="Mes anterior">
+                    <i data-lucide="chevron-left"></i>
+                  </button>
+                  <span class="cly-cal-month" id="cal-month-label">Julio 2025</span>
+                  <button class="cly-nav-btn" id="cal-next-btn" onclick="calNext()" aria-label="Mes siguiente">
+                    <i data-lucide="chevron-right"></i>
+                  </button>
+                </div>
+                <div class="cly-cal-dow">
+                  <span>Do</span><span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span>
+                </div>
+                <div class="cly-cal-grid" id="cal-grid"></div>
+              </div>
+
+              <!-- Time Slots -->
+              <div class="cly-slots-panel" id="cly-slots-panel" style="display:none">
+                <div class="cly-slots-header">
+                  <span id="cly-slots-date-label">Martes, 7 Julio</span>
+                </div>
+                <div class="cly-slots-list" id="cly-slots-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Contact Form -->
+          <div class="cly-step" id="cly-step-form" style="display:none">
+            <button class="cly-back-btn" onclick="calBackToCalendar()">
+              <i data-lucide="arrow-left"></i> Cambiar fecha/hora
+            </button>
+            <h3 class="cly-step-title">Paso 3 — Tus datos de contacto</h3>
+            <p class="cly-step-sub" id="cly-form-meeting-summary">Reunión de 30 min · Google Meet</p>
+
+            <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="cly-form">
+              <input type="hidden" id="selected-plan-input" name="plan" value="General">
+              <input type="hidden" id="booking-datetime" name="datetime" value="">
+
+              <div class="cly-field">
+                <label for="booking-name">Nombre Completo *</label>
+                <input type="text" id="booking-name" required placeholder="Ej. Juan Pérez">
+              </div>
+
+              <div class="cly-field">
+                <label for="booking-email">Correo Corporativo *</label>
+                <input type="email" id="booking-email" required placeholder="Ej. jperez@empresa.com">
+              </div>
+
+              <div class="cly-field-row">
+                <div class="cly-field">
+                  <label for="booking-company">Empresa *</label>
+                  <input type="text" id="booking-company" required placeholder="Constructora SPA">
+                </div>
+                <div class="cly-field">
+                  <label for="booking-phone">Teléfono *</label>
+                  <input type="tel" id="booking-phone" required placeholder="+56 9 1234 5678">
+                </div>
+              </div>
+
+              <div class="cly-field">
+                <label for="booking-industry">Rubro / Industria *</label>
+                <select id="booking-industry" required>
+                  <option value="" disabled selected>Selecciona tu industria</option>
+                  <option value="construccion">Construcción</option>
+                  <option value="logistica">Logística / Bodegaje</option>
+                  <option value="manufactura">Manufactura / Industrial</option>
+                  <option value="energia">Energía / Electricidad</option>
+                  <option value="mineria">Minería</option>
+                  <option value="otro">Otro Rubro Comercial</option>
+                </select>
+              </div>
+
+              <div class="cly-field">
+                <label for="booking-message">¿Qué riesgos críticos deseas abordar? <span class="cly-optional">(Opcional)</span></label>
+                <textarea id="booking-message" rows="3" placeholder="Ej. Caídas de altura, atrapamiento de extremidades..."></textarea>
+              </div>
+
+              <button type="submit" class="cly-submit-btn" id="submit-booking-btn">
+                Confirmar Videollamada
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+        </main>
+      </div>
+
+      <!-- SUCCESS SCREEN -->
+      <div class="cly-success" id="modal-success-screen" style="display: none;">
+        <div class="cly-success-icon">
+          <i data-lucide="calendar-check"></i>
+        </div>
+        <h3 class="cly-success-title">¡Reunión Confirmada!</h3>
+        <p class="cly-success-sub">Hemos recibido tu solicitud. El NDA ha sido activado electrónicamente.</p>
+
+        <div class="cly-success-card">
+          <div class="cly-success-row">
+            <i data-lucide="user"></i>
+            <div>
+              <span class="cly-success-label">Solicitante</span>
+              <span class="cly-success-val" id="summary-name">—</span>
+            </div>
+          </div>
+          <div class="cly-success-row">
+            <i data-lucide="building-2"></i>
+            <div>
+              <span class="cly-success-label">Empresa</span>
+              <span class="cly-success-val" id="summary-company">—</span>
+            </div>
+          </div>
+          <div class="cly-success-row">
+            <i data-lucide="calendar"></i>
+            <div>
+              <span class="cly-success-label">Fecha y Hora</span>
+              <span class="cly-success-val" id="summary-date">—</span>
+            </div>
+          </div>
+          <div class="cly-success-row">
+            <i data-lucide="package"></i>
+            <div>
+              <span class="cly-success-label">Plan de Interés</span>
+              <span class="cly-success-val cly-accent" id="summary-plan">—</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="cly-success-email">Recibirás la invitación de Google Meet en <strong id="summary-email">—</strong></p>
+        <div class="cly-success-badge"><i data-lucide="shield-check"></i> NDA Aceptado y Protegido</div>
+        <button class="cly-done-btn" onclick="closeBookingModal()">Finalizar y Cerrar</button>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- Lightbox Modal -->
+  <dialog id="lightbox-modal" class="lightbox-dialog" onclick="closeLightbox()">
+    <div class="lightbox-wrapper" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-img" src="" alt="Zoomed view">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </dialog>
+
+  <!-- JS Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
