@@ -2835,8 +2835,8 @@ dialog[open]::backdrop {
 }
 
 .transform-col-label i { width: 16px; height: 16px; flex-shrink: 0; }
-.problem-label  { color: #ef4444; justify-content: flex-start; }
-.solution-label { color: #10b981; justify-content: flex-end; }
+.problem-label  { color: #ef4444; justify-content: center; }
+.solution-label { color: #10b981; justify-content: center; }
 
 .transform-row {
   display: flex;
