@@ -6,18 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // --- Video Looping from 3.3s to 11.4s (exact beats) ---
+  // --- Video Looping from 4.0s to 10.0s ---
   const qb2Video = document.querySelector('.qb2-video');
   if (qb2Video) {
     qb2Video.addEventListener('timeupdate', () => {
-      if (qb2Video.currentTime >= 11.4) {
-        qb2Video.currentTime = 3.3;
+      if (qb2Video.currentTime >= 10.0) {
+        qb2Video.currentTime = 4.0;
       }
     });
 
     qb2Video.addEventListener('play', () => {
-      if (qb2Video.currentTime < 3.3) {
-        qb2Video.currentTime = 3.3;
+      if (qb2Video.currentTime < 4.0) {
+        qb2Video.currentTime = 4.0;
       }
     });
   }
